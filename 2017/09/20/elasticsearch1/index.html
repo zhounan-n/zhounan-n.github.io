@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="杂谈," />
+  <meta name="keywords" content="elasticsearch," />
 
 
 
@@ -97,18 +97,22 @@
 
 
 
-<meta name="description" content="一直想着搭一个个人的技术博客。java开发两年多，之前也有整理记录遇到的一些问题或是技术资料，但线下保存来保存去没有一个归纳，不弄丢也很少去看了。所以打算打一个博客好好记录归纳一下">
-<meta name="keywords" content="杂谈">
+<meta name="description" content="最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。 eslaticsearch的安装 eslaticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。  head插件的安装 这里要用到node.js,下面需要用npm指">
+<meta name="keywords" content="elasticsearch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为什么创建此博客">
-<meta property="og:url" content="http://zhoun.site/2017/09/08/first_create/index.html">
+<meta property="og:title" content="elasticsearch及head插件在windows环境下的安装">
+<meta property="og:url" content="http://zhoun.site/2017/09/20/elasticsearch1/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="一直想着搭一个个人的技术博客。java开发两年多，之前也有整理记录遇到的一些问题或是技术资料，但线下保存来保存去没有一个归纳，不弄丢也很少去看了。所以打算打一个博客好好记录归纳一下">
+<meta property="og:description" content="最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。 eslaticsearch的安装 eslaticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。  head插件的安装 这里要用到node.js,下面需要用npm指">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-15T09:53:27.884Z">
+<meta property="og:image" content="http://127.0.0.1:5000/images/1.png">
+<meta property="og:image" content="http://127.0.0.1:5000/images/2.png">
+<meta property="og:image" content="http://127.0.0.1:5000/images/3.png">
+<meta property="og:updated_time" content="2017-09-20T10:00:56.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="为什么创建此博客">
-<meta name="twitter:description" content="一直想着搭一个个人的技术博客。java开发两年多，之前也有整理记录遇到的一些问题或是技术资料，但线下保存来保存去没有一个归纳，不弄丢也很少去看了。所以打算打一个博客好好记录归纳一下">
+<meta name="twitter:title" content="elasticsearch及head插件在windows环境下的安装">
+<meta name="twitter:description" content="最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。 eslaticsearch的安装 eslaticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。  head插件的安装 这里要用到node.js,下面需要用npm指">
+<meta name="twitter:image" content="http://127.0.0.1:5000/images/1.png">
 
 
 
@@ -138,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://zhoun.site/2017/09/08/first_create/"/>
+  <link rel="canonical" href="http://zhoun.site/2017/09/20/elasticsearch1/"/>
 
 
 
 
 
-  <title>为什么创建此博客 | zonway</title>
+  <title>elasticsearch及head插件在windows环境下的安装 | zonway</title>
   
 
 
@@ -281,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/08/first_create/">
+    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/20/elasticsearch1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="周楠">
@@ -298,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">为什么创建此博客</h1>
+          <h1 class="post-title" itemprop="name headline">elasticsearch及head插件在windows环境下的安装</h1>
         
 
         <div class="post-meta">
@@ -310,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-08T11:14:02+08:00">
-                2017-09-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T17:57:28+08:00">
+                2017-09-20
               </time>
             
 
@@ -333,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">杂谈</span>
+                  <a href="/categories/elastisearch/" itemprop="url" rel="index">
+                    <span itemprop="name">elastisearch</span>
                   </a>
                 </span>
 
@@ -370,8 +374,41 @@
       
 
       
-        <p>一直想着搭一个个人的技术博客。java开发两年多，之前也有整理记录遇到的一些问题或是技术资料，但线下保存来保存去没有一个归纳，不弄丢也很少去看了。所以打算打一个博客好好记录归纳一下</p>
-<a id="more"></a>
+        <p>最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。</p>
+<h2 id="eslaticsearch的安装"><a href="#eslaticsearch的安装" class="headerlink" title="eslaticsearch的安装"></a>eslaticsearch的安装</h2><ul>
+<li>eslaticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。<br><img src="http://127.0.0.1:5000/images/1.png" alt="启动成功界面"></li>
+</ul>
+<h2 id="head插件的安装"><a href="#head插件的安装" class="headerlink" title="head插件的安装"></a>head插件的安装</h2><ul>
+<li>这里要用到node.js,下面需要用npm指令安装插件，百度一下安装即可。</li>
+<li>安装grunt,head插件是通过grunt启动的。<br>路径切换到安装的node.js目录下，如：D:\nodejs,执行以下命令(如果你安装了git,可以直接在目录下右键git bash打开窗口,比cmd窗口要美观一些)<br>npm install -g grunt-cli<br>安装完成后用grunt -verion检查是否安装成功<br><img src="http://127.0.0.1:5000/images/2.png" alt="grunt安装界面" title="GitHub Mark"></li>
+<li>用git下载head插件<br>git clone git://github.com/mobz/elasticsearch-head.git<h4 id="修改head源码："><a href="#修改head源码：" class="headerlink" title="修改head源码："></a>修改head源码：</h4>  – 因为head插件的版本是2.6的，直接执行有很多限制，需要修改接个地方<br>  目录：head/Gruntfile.js：<a id="more"></a>
+connect: {<br>&emsp;&emsp;server: {<br>   &emsp;&emsp;options: {<pre><code> &amp;emsp;&amp;emsp; port: 9100,
+ &amp;emsp;&amp;emsp;hostname: &apos;*&apos;,
+&amp;emsp;&amp;emsp; base: &apos;.&apos;,
+ &amp;emsp;&amp;emsp;keepalive: true
+</code></pre>   &emsp;&emsp;}<br>&emsp;&emsp;}<br>}<br>增加hostname属性，设置为*<h4 id="修改链接地址："><a href="#修改链接地址：" class="headerlink" title="修改链接地址："></a>修改链接地址：</h4>   目录：head/_site/app.js<br>   this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) ||”<a href="http://localhost:9200" target="_blank" rel="external">http://localhost:9200</a>“;<br>   把localhost修改成你es的服务器地址，如：<br>   this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) ||”<a href="http://10.10.10.10:9200" target="_blank" rel="external">http://10.10.10.10:9200</a>“;</li>
+</ul>
+<h4 id="运行head"><a href="#运行head" class="headerlink" title="运行head"></a>运行head</h4><pre><code>修改elasticsearch的配置文件 config/elasticsearch.yml(参数后面要有空格)：
+
+换个集群的名字，免得跟别人的集群混在一起
+cluster.name: es-5.0-test
+
+换个节点名字
+node.name: node-101
+
+修改一下ES的监听地址，这样别的机器也可以访问
+network.host: 0.0.0.0
+
+端口默认的就好
+http.port: 9200
+
+增加新的参数，这样head插件可以访问es
+http.cors.enabled: true
+http.cors.allow-origin: &quot;*&quot;
+</code></pre><h3 id="启动elasticsearch"><a href="#启动elasticsearch" class="headerlink" title="启动elasticsearch"></a>启动elasticsearch</h3><h3 id="然后在head源码目录中，执行npm-install-下载的包："><a href="#然后在head源码目录中，执行npm-install-下载的包：" class="headerlink" title="然后在head源码目录中，执行npm install 下载的包："></a>然后在head源码目录中，执行npm install 下载的包：</h3><pre><code>npm install (这个命令执行可能要等一会儿，运行报错就重新执行一遍直到完成)
+</code></pre><h3 id="启动head插件"><a href="#启动head插件" class="headerlink" title="启动head插件"></a>启动head插件</h3><pre><code>localhost:9100
+这样就可以访问head插件了
+</code></pre><p><img src="http://127.0.0.1:5000/images/3.png" alt="head插件启动成功界面" title="GitHub Mark"></p>
 
       
     </div>
@@ -418,7 +455,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/杂谈/" rel="tag"># 杂谈</a>
+            <a href="/tags/elasticsearch/" rel="tag"># elasticsearch</a>
           
         </div>
       
@@ -431,15 +468,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/15/second/" rel="next" title="转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接)">
+                <i class="fa fa-chevron-left"></i> 转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/15/second/" rel="prev" title="转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接)">
-                转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -491,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -564,6 +610,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#eslaticsearch的安装"><span class="nav-number">1.</span> <span class="nav-text">eslaticsearch的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#head插件的安装"><span class="nav-number">2.</span> <span class="nav-text">head插件的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改head源码："><span class="nav-number">2.0.1.</span> <span class="nav-text">修改head源码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改链接地址："><span class="nav-number">2.0.2.</span> <span class="nav-text">修改链接地址：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行head"><span class="nav-number">2.0.3.</span> <span class="nav-text">运行head</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动elasticsearch"><span class="nav-number">2.1.</span> <span class="nav-text">启动elasticsearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后在head源码目录中，执行npm-install-下载的包："><span class="nav-number">2.2.</span> <span class="nav-text">然后在head源码目录中，执行npm install 下载的包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动head插件"><span class="nav-number">2.3.</span> <span class="nav-text">启动head插件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
