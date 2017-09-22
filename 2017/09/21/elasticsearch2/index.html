@@ -97,22 +97,18 @@
 
 
 
-<meta name="description" content="最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。 elasticsearch的安装 elasticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。  head插件的安装">
+<meta name="description" content="昨天写了再windows环境中安装elasticsearh的文章，在使用中可能依然会遇到一些问题。今天这篇记录一下在linux环境中安装启动遇到的一些错误。我的系统是centos7 错误1:root用户启动报错，切换成非root用户启动 错误2:Could not register mbeans java.security.AccessControlException 解决方法：切换之后要把ela">
 <meta name="keywords" content="elasticsearch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="elasticsearch及head插件在windows环境下的安装">
-<meta property="og:url" content="http://zhoun.site/2017/09/20/elasticsearch1/index.html">
+<meta property="og:title" content="elasticsearch在linux环境中安装遇到的问题及解决方法">
+<meta property="og:url" content="http://zhoun.site/2017/09/21/elasticsearch2/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。 elasticsearch的安装 elasticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。  head插件的安装">
+<meta property="og:description" content="昨天写了再windows环境中安装elasticsearh的文章，在使用中可能依然会遇到一些问题。今天这篇记录一下在linux环境中安装启动遇到的一些错误。我的系统是centos7 错误1:root用户启动报错，切换成非root用户启动 错误2:Could not register mbeans java.security.AccessControlException 解决方法：切换之后要把ela">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://zhoun.site/images/1.png">
-<meta property="og:image" content="http://zhoun.site/images/2.png">
-<meta property="og:image" content="http://zhoun.site/images/3.png">
-<meta property="og:updated_time" content="2017-09-21T01:42:14.190Z">
+<meta property="og:updated_time" content="2017-09-22T02:23:55.315Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="elasticsearch及head插件在windows环境下的安装">
-<meta name="twitter:description" content="最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。 elasticsearch的安装 elasticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。  head插件的安装">
-<meta name="twitter:image" content="http://zhoun.site/images/1.png">
+<meta name="twitter:title" content="elasticsearch在linux环境中安装遇到的问题及解决方法">
+<meta name="twitter:description" content="昨天写了再windows环境中安装elasticsearh的文章，在使用中可能依然会遇到一些问题。今天这篇记录一下在linux环境中安装启动遇到的一些错误。我的系统是centos7 错误1:root用户启动报错，切换成非root用户启动 错误2:Could not register mbeans java.security.AccessControlException 解决方法：切换之后要把ela">
 
 
 
@@ -142,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://zhoun.site/2017/09/20/elasticsearch1/"/>
+  <link rel="canonical" href="http://zhoun.site/2017/09/21/elasticsearch2/"/>
 
 
 
 
 
-  <title>elasticsearch及head插件在windows环境下的安装 | zonway</title>
+  <title>elasticsearch在linux环境中安装遇到的问题及解决方法 | zonway</title>
   
 
 
@@ -285,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/20/elasticsearch1/">
+    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/21/elasticsearch2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="周楠">
@@ -302,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">elasticsearch及head插件在windows环境下的安装</h1>
+          <h1 class="post-title" itemprop="name headline">elasticsearch在linux环境中安装遇到的问题及解决方法</h1>
         
 
         <div class="post-meta">
@@ -314,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T17:57:28+08:00">
-                2017-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-21T16:29:13+08:00">
+                2017-09-21
               </time>
             
 
@@ -337,8 +333,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/elastisearch/" itemprop="url" rel="index">
-                    <span itemprop="name">elastisearch</span>
+                  <a href="/categories/elasticsearch/" itemprop="url" rel="index">
+                    <span itemprop="name">elasticsearch</span>
                   </a>
                 </span>
 
@@ -374,42 +370,28 @@
       
 
       
-        <p>最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。</p>
-<h2 id="elasticsearch的安装"><a href="#elasticsearch的安装" class="headerlink" title="elasticsearch的安装"></a>elasticsearch的安装</h2><ul>
-<li>elasticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。<br><img src="/images/1.png" alt="启动成功界面" title="elasticsearch成功启动界面"></li>
-</ul>
-<h2 id="head插件的安装"><a href="#head插件的安装" class="headerlink" title="head插件的安装"></a>head插件的安装</h2><a id="more"></a>
-<ul>
-<li>这里要用到node.js,下面需要用npm指令安装插件，百度一下安装即可。</li>
-<li>安装grunt,head插件是通过grunt启动的。<br>路径切换到安装的node.js目录下，如：D:\nodejs,执行以下命令(如果你安装了git,可以直接在目录下右键git bash打开窗口,比cmd窗口要美观一些)<br>npm install -g grunt-cli<br>安装完成后用grunt -verion检查是否安装成功<br><img src="/images/2.png" alt="grunt安装界面" title="grunt安装界面"></li>
-<li>用git下载head插件<br>git clone git://github.com/mobz/elasticsearch-head.git<h4 id="修改head源码："><a href="#修改head源码：" class="headerlink" title="修改head源码："></a>修改head源码：</h4>  – 因为head插件的版本是2.6的，直接执行有很多限制，需要修改接个地方<br>  目录：head/Gruntfile.js：<br>connect: {<br>&emsp;&emsp;server: {<br>   &emsp;&emsp;options: {<pre><code> &amp;emsp;&amp;emsp; port: 9100,
- &amp;emsp;&amp;emsp;hostname: &apos;*&apos;,
-&amp;emsp;&amp;emsp; base: &apos;.&apos;,
- &amp;emsp;&amp;emsp;keepalive: true
-</code></pre>   &emsp;&emsp;}<br>&emsp;&emsp;}<br>}<br>增加hostname属性，设置为*<h4 id="修改链接地址："><a href="#修改链接地址：" class="headerlink" title="修改链接地址："></a>修改链接地址：</h4>   目录：head/_site/app.js<br>   this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) ||”<a href="http://localhost:9200" target="_blank" rel="external">http://localhost:9200</a>“;<br>   把localhost修改成你es的服务器地址，如：<br>   this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) ||”<a href="http://10.10.10.10:9200" target="_blank" rel="external">http://10.10.10.10:9200</a>“;</li>
-</ul>
-<h4 id="运行head"><a href="#运行head" class="headerlink" title="运行head"></a>运行head</h4><pre><code>修改elasticsearch的配置文件 config/elasticsearch.yml(参数后面要有空格)：
-
-换个集群的名字，免得跟别人的集群混在一起
-cluster.name: es-5.0-test
-
-换个节点名字
-node.name: node-101
-
-修改一下ES的监听地址，这样别的机器也可以访问
-network.host: 0.0.0.0
-
-端口默认的就好
-http.port: 9200
-
-增加新的参数，这样head插件可以访问es
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-</code></pre><h3 id="启动elasticsearch"><a href="#启动elasticsearch" class="headerlink" title="启动elasticsearch"></a>启动elasticsearch</h3><h3 id="然后在head源码目录中，执行npm-install-下载的包："><a href="#然后在head源码目录中，执行npm-install-下载的包：" class="headerlink" title="然后在head源码目录中，执行npm install 下载的包："></a>然后在head源码目录中，执行npm install 下载的包：</h3><pre><code>npm install (这个命令执行可能要等一会儿，运行报错就重新执行一遍直到完成)
-</code></pre><h3 id="启动head插件"><a href="#启动head插件" class="headerlink" title="启动head插件"></a>启动head插件</h3><pre><code>localhost:9100
-这样就可以访问head插件了
-</code></pre><p><img src="/images/3.png" alt="head插件启动成功界面" title="head插件启动界面"></p>
-
+        <p>昨天写了再windows环境中安装elasticsearh的文章，在使用中可能依然会遇到一些问题。今天这篇记录一下在linux环境中安装启动遇到的一些错误。我的系统是centos7</p>
+<h4 id="错误1"><a href="#错误1" class="headerlink" title="错误1:"></a>错误1:</h4><pre><code>root用户启动报错，切换成非root用户启动
+</code></pre><h4 id="错误2"><a href="#错误2" class="headerlink" title="错误2:"></a>错误2:</h4><pre><code>Could not register mbeans java.security.AccessControlException
+解决方法：切换之后要把elasticsearch文件的所有权改成当前用户，命令如下(zhoun为当前用户名)：
+chown -R zhoun 目录名/
+</code></pre><a id="more"></a>
+<h4 id="错误3"><a href="#错误3" class="headerlink" title="错误3:"></a>错误3:</h4><pre><code>BindTransportException[Failed to bind to [9300-9400]]
+解决犯法：修改/ect/elasticsearch/elasticsearch.yml配置文件，例如:127.0.0.1
+</code></pre><h4 id="错误4"><a href="#错误4" class="headerlink" title="错误4:"></a>错误4:</h4><pre><code>max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+解决方法:切换到root用户执行如下命令：
+echo &quot;vm.max_map_count=262144&quot; &gt;&gt;/etc/sysctl.conf
+修改后需重启才会生效
+</code></pre><h4 id="错误5："><a href="#错误5：" class="headerlink" title="错误5："></a>错误5：</h4><pre><code>bootstrap checks failed 
+max file descriptors [65535] for elasticsearch process likely too low, increase to at least [65536]
+解决方法：切换到root用户，修改limits.conf配置文件，保存后记得重启(这个错误试了好久)
+vi /etc/security/limits.conf 
+添加如下内容:
+* soft nofile 65536
+* hard nofile 131072
+* soft nproc 2048
+* hard nproc 4096
+</code></pre><h6 id="解决了上面几个错误后elasticsearch成功在虚拟机中启动了-可能环境不一样遇到的错误也不一样，我这里只把我遇到的记录整理了"><a href="#解决了上面几个错误后elasticsearch成功在虚拟机中启动了-可能环境不一样遇到的错误也不一样，我这里只把我遇到的记录整理了" class="headerlink" title="解决了上面几个错误后elasticsearch成功在虚拟机中启动了(可能环境不一样遇到的错误也不一样，我这里只把我遇到的记录整理了)"></a>解决了上面几个错误后elasticsearch成功在虚拟机中启动了(可能环境不一样遇到的错误也不一样，我这里只把我遇到的记录整理了)</h6>
       
     </div>
     
@@ -468,8 +450,8 @@ http.cors.allow-origin: &quot;*&quot;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/15/second/" rel="next" title="转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接)">
-                <i class="fa fa-chevron-left"></i> 转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接)
+              <a href="/2017/09/20/elasticsearch1/" rel="next" title="elasticsearch及head插件在windows环境下的安装">
+                <i class="fa fa-chevron-left"></i> elasticsearch及head插件在windows环境下的安装
               </a>
             
           </div>
@@ -477,10 +459,6 @@ http.cors.allow-origin: &quot;*&quot;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/21/elasticsearch2/" rel="prev" title="elasticsearch在linux环境中安装遇到的问题及解决方法">
-                elasticsearch在linux环境中安装遇到的问题及解决方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,7 +602,7 @@ http.cors.allow-origin: &quot;*&quot;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#elasticsearch的安装"><span class="nav-number">1.</span> <span class="nav-text">elasticsearch的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#head插件的安装"><span class="nav-number">2.</span> <span class="nav-text">head插件的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改head源码："><span class="nav-number">2.0.1.</span> <span class="nav-text">修改head源码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改链接地址："><span class="nav-number">2.0.2.</span> <span class="nav-text">修改链接地址：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行head"><span class="nav-number">2.0.3.</span> <span class="nav-text">运行head</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动elasticsearch"><span class="nav-number">2.1.</span> <span class="nav-text">启动elasticsearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#然后在head源码目录中，执行npm-install-下载的包："><span class="nav-number">2.2.</span> <span class="nav-text">然后在head源码目录中，执行npm install 下载的包：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动head插件"><span class="nav-number">2.3.</span> <span class="nav-text">启动head插件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#错误1"><span class="nav-number">1.</span> <span class="nav-text">错误1:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误2"><span class="nav-number">2.</span> <span class="nav-text">错误2:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误3"><span class="nav-number">3.</span> <span class="nav-text">错误3:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误4"><span class="nav-number">4.</span> <span class="nav-text">错误4:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误5："><span class="nav-number">5.</span> <span class="nav-text">错误5：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#解决了上面几个错误后elasticsearch成功在虚拟机中启动了-可能环境不一样遇到的错误也不一样，我这里只把我遇到的记录整理了"><span class="nav-number">5.0.1.</span> <span class="nav-text">解决了上面几个错误后elasticsearch成功在虚拟机中启动了(可能环境不一样遇到的错误也不一样，我这里只把我遇到的记录整理了)</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
