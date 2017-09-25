@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-22T02:23:55.315Z</updated>
+  <updated>2017-09-25T07:29:25.491Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>elasticsearch2.3.2在windows环境中安装head插件</title>
+    <link href="http://zhoun.site/2017/09/25/elasticsearch3/"/>
+    <id>http://zhoun.site/2017/09/25/elasticsearch3/</id>
+    <published>2017-09-25T07:25:45.000Z</published>
+    <updated>2017-09-25T07:29:25.491Z</updated>
+    
+    <content type="html"><![CDATA[<p>这几天本地项目连接elasticsearch一直连不上有点烦躁啊。head插件安装之前那篇文章也有记录，但这个不太一样(和版本也有关系)，之前百度的一些都是说plugin -install,没有这个命令，plugin install才对。</p><h4 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h4><pre><code>进入到elasticsearch安装目录，进入bin目录执行安装命令即可：plugin install mobz/elasticsearch-head </code></pre><p><img src="/images/4.png" alt="head插件启动成功界面" title="head插件启动界面"><br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这几天本地项目连接elasticsearch一直连不上有点烦躁啊。head插件安装之前那篇文章也有记录，但这个不太一样(和版本也有关系)，之前百度的一些都是说plugin -install,没有这个命令，plugin install才对。&lt;/p&gt;
+&lt;h4 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装:&quot;&gt;&lt;/a&gt;安装:&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;进入到elasticsearch安装目录，进入bin目录执行安装命令即可：
+plugin install mobz/elasticsearch-head 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/images/4.png&quot; alt=&quot;head插件启动成功界面&quot; title=&quot;head插件启动界面&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
+    
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
+    
+  </entry>
   
   <entry>
     <title>elasticsearch在linux环境中安装遇到的问题及解决方法</title>
@@ -48,7 +73,7 @@ chown -R zhoun 目录名/
     <link href="http://zhoun.site/2017/09/20/elasticsearch1/"/>
     <id>http://zhoun.site/2017/09/20/elasticsearch1/</id>
     <published>2017-09-20T09:57:28.000Z</published>
-    <updated>2017-09-21T01:42:14.190Z</updated>
+    <updated>2017-09-22T02:27:40.666Z</updated>
     
     <content type="html"><![CDATA[<p>最近在学习使用elasticsearch,但是没有linux环境，所以在网上搜集了各种资料后成功在本地windows系统下安装了，简单总结下。</p><h2 id="elasticsearch的安装"><a href="#elasticsearch的安装" class="headerlink" title="elasticsearch的安装"></a>elasticsearch的安装</h2><ul><li>elasticsearch的安装比较简单，直接去官网下载就可以，解压。执行bin文件下的bat文件即可启动，附上elasticsearch启动成功的界面。<br><img src="/images/1.png" alt="启动成功界面" title="elasticsearch成功启动界面"></li></ul><h2 id="head插件的安装"><a href="#head插件的安装" class="headerlink" title="head插件的安装"></a>head插件的安装</h2><a id="more"></a><ul><li>这里要用到node.js,下面需要用npm指令安装插件，百度一下安装即可。</li><li>安装grunt,head插件是通过grunt启动的。<br>路径切换到安装的node.js目录下，如：D:\nodejs,执行以下命令(如果你安装了git,可以直接在目录下右键git bash打开窗口,比cmd窗口要美观一些)<br>npm install -g grunt-cli<br>安装完成后用grunt -verion检查是否安装成功<br><img src="/images/2.png" alt="grunt安装界面" title="grunt安装界面"></li><li>用git下载head插件<br>git clone git://github.com/mobz/elasticsearch-head.git<h4 id="修改head源码："><a href="#修改head源码：" class="headerlink" title="修改head源码："></a>修改head源码：</h4>  – 因为head插件的版本是2.6的，直接执行有很多限制，需要修改接个地方<br>  目录：head/Gruntfile.js：<br>connect: {<br>&emsp;&emsp;server: {<br>   &emsp;&emsp;options: {<pre><code> &amp;emsp;&amp;emsp; port: 9100, &amp;emsp;&amp;emsp;hostname: &apos;*&apos;,&amp;emsp;&amp;emsp; base: &apos;.&apos;, &amp;emsp;&amp;emsp;keepalive: true</code></pre>   &emsp;&emsp;}<br>&emsp;&emsp;}<br>}<br>增加hostname属性，设置为*<h4 id="修改链接地址："><a href="#修改链接地址：" class="headerlink" title="修改链接地址："></a>修改链接地址：</h4>   目录：head/_site/app.js<br>   this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) ||”<a href="http://localhost:9200" target="_blank" rel="external">http://localhost:9200</a>“;<br>   把localhost修改成你es的服务器地址，如：<br>   this.base_uri = this.config.base_uri || this.prefs.get(“app-base_uri”) ||”<a href="http://10.10.10.10:9200" target="_blank" rel="external">http://10.10.10.10:9200</a>“;</li></ul><h4 id="运行head"><a href="#运行head" class="headerlink" title="运行head"></a>运行head</h4><pre><code>修改elasticsearch的配置文件 config/elasticsearch.yml(参数后面要有空格)：换个集群的名字，免得跟别人的集群混在一起cluster.name: es-5.0-test换个节点名字node.name: node-101修改一下ES的监听地址，这样别的机器也可以访问network.host: 0.0.0.0端口默认的就好http.port: 9200增加新的参数，这样head插件可以访问eshttp.cors.enabled: truehttp.cors.allow-origin: &quot;*&quot;</code></pre><h3 id="启动elasticsearch"><a href="#启动elasticsearch" class="headerlink" title="启动elasticsearch"></a>启动elasticsearch</h3><h3 id="然后在head源码目录中，执行npm-install-下载的包："><a href="#然后在head源码目录中，执行npm-install-下载的包：" class="headerlink" title="然后在head源码目录中，执行npm install 下载的包："></a>然后在head源码目录中，执行npm install 下载的包：</h3><pre><code>npm install (这个命令执行可能要等一会儿，运行报错就重新执行一遍直到完成)</code></pre><h3 id="启动head插件"><a href="#启动head插件" class="headerlink" title="启动head插件"></a>启动head插件</h3><pre><code>localhost:9100这样就可以访问head插件了</code></pre><p><img src="/images/3.png" alt="head插件启动成功界面" title="head插件启动界面"></p>]]></content>
     
@@ -62,7 +87,7 @@ chown -R zhoun 目录名/
     
     </summary>
     
-      <category term="elastisearch" scheme="http://zhoun.site/categories/elastisearch/"/>
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
     
     
       <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
