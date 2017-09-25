@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-25T07:29:25.491Z</updated>
+  <updated>2017-09-25T07:32:29.780Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://zhoun.site/2017/09/25/elasticsearch3/"/>
     <id>http://zhoun.site/2017/09/25/elasticsearch3/</id>
     <published>2017-09-25T07:25:45.000Z</published>
-    <updated>2017-09-25T07:29:25.491Z</updated>
+    <updated>2017-09-25T07:32:29.780Z</updated>
     
-    <content type="html"><![CDATA[<p>这几天本地项目连接elasticsearch一直连不上有点烦躁啊。head插件安装之前那篇文章也有记录，但这个不太一样(和版本也有关系)，之前百度的一些都是说plugin -install,没有这个命令，plugin install才对。</p><h4 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h4><pre><code>进入到elasticsearch安装目录，进入bin目录执行安装命令即可：plugin install mobz/elasticsearch-head </code></pre><p><img src="/images/4.png" alt="head插件启动成功界面" title="head插件启动界面"><br><a id="more"></a></p>]]></content>
+    <content type="html"><![CDATA[<p>这几天本地项目连接elasticsearch一直连不上有点烦躁啊。head插件安装之前那篇文章也有记录，但这个不太一样(和版本也有关系)，之前百度的一些都是说plugin -install,没有这个命令，plugin install才对。</p><h4 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h4><pre><code>进入到elasticsearch安装目录，进入bin目录执行安装命令即可：plugin install mobz/elasticsearch-head </code></pre><p><img src="/images/4.png" alt="head插件启动成功界面" title="head插件安装界面"><br><a id="more"></a></p>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;这几天本地项目连接elasticsearch一直连不上有点烦躁啊。head插件安装之前那篇文章也有记录，但这个不太一样(和版本也有关系)，之前百度的一些都是说plugin -install,没有这个命令，plugin install才对。&lt;/p&gt;
 &lt;h4 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装:&quot;&gt;&lt;/a&gt;安装:&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;进入到elasticsearch安装目录，进入bin目录执行安装命令即可：
 plugin install mobz/elasticsearch-head 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/images/4.png&quot; alt=&quot;head插件启动成功界面&quot; title=&quot;head插件启动界面&quot;&gt;&lt;br&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/images/4.png&quot; alt=&quot;head插件启动成功界面&quot; title=&quot;head插件安装界面&quot;&gt;&lt;br&gt;
     
     </summary>
     
