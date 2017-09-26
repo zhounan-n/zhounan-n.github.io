@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-26T02:59:42.084Z</updated>
+  <updated>2017-09-26T08:37:13.140Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WINDOWS环境下安装curl</title>
+    <link href="http://zhoun.site/2017/09/26/curl/"/>
+    <id>http://zhoun.site/2017/09/26/curl/</id>
+    <published>2017-09-26T08:24:12.000Z</published>
+    <updated>2017-09-26T08:37:13.140Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为学习elasticsearch需要使用curl命令，因为电脑是windows系统，配置原因使用虚拟机会卡爆，所以需要在windows环境下安装以供之后的学习使用,需要的朋友可以mark</p><h4 id="curl下载地址"><a href="#curl下载地址" class="headerlink" title="curl下载地址:"></a>curl下载地址:</h4><pre><code>https://curl.haxx.se/download.html</code></pre><p>这里我下载的版本是7.53.1，如图<br><img src="/images/bb.png" alt="版本" title="版本"></p><a id="more"></a><p>下载后解压到指定目录</p><h4 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h4><pre><code>如图：</code></pre><p><img src="/images/hjbl1.png" alt="环境变量配置1" title="环境变量配置1"><br><img src="/images/hjbl2.png" alt="环境变量配置2" title="环境变量配置2"></p><p>配置好环境变量后重启，打开命令窗口用curl命令进行验证<br><img src="/images/hjbl2.png" alt="安装成功" title="安装成功">    </p><p>其实我发现安装curl之前git客户端是可以使用curl命令的。。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为学习elasticsearch需要使用curl命令，因为电脑是windows系统，配置原因使用虚拟机会卡爆，所以需要在windows环境下安装以供之后的学习使用,需要的朋友可以mark&lt;/p&gt;
+&lt;h4 id=&quot;curl下载地址&quot;&gt;&lt;a href=&quot;#curl下载地址&quot; class=&quot;headerlink&quot; title=&quot;curl下载地址:&quot;&gt;&lt;/a&gt;curl下载地址:&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;https://curl.haxx.se/download.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这里我下载的版本是7.53.1，如图&lt;br&gt;&lt;img src=&quot;/images/bb.png&quot; alt=&quot;版本&quot; title=&quot;版本&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
+    
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
+    
+  </entry>
   
   <entry>
     <title>elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</title>
