@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="elasticsearch," />
 
 
 
@@ -97,16 +97,20 @@
 
 
 
-<meta name="description" content="java技术记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zonway">
-<meta property="og:url" content="http://zhoun.site/archives/2017/index.html">
+<meta name="description" content="这几天一直在搞elasticsearch安装连接的各种问题，各种坑，使用要及其注意版本问题，版本不一样出现的问题不一样，这个错误在5.x版本中就不会出现  解决:修改配置文件，显示指定network.publish_host(ip根据自己的来)： #network.publish_host: 192.168.3.50 #discovery.zen.ping.unicast.hosts: [&amp;quo">
+<meta name="keywords" content="elasticsearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决">
+<meta property="og:url" content="http://zhoun.site/2017/09/26/elasticsearch4/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="java技术记录">
+<meta property="og:description" content="这几天一直在搞elasticsearch安装连接的各种问题，各种坑，使用要及其注意版本问题，版本不一样出现的问题不一样，这个错误在5.x版本中就不会出现  解决:修改配置文件，显示指定network.publish_host(ip根据自己的来)： #network.publish_host: 192.168.3.50 #discovery.zen.ping.unicast.hosts: [&amp;quo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://zhoun.site/images/cc.png">
+<meta property="og:updated_time" content="2017-09-26T02:59:42.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zonway">
-<meta name="twitter:description" content="java技术记录">
+<meta name="twitter:title" content="elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决">
+<meta name="twitter:description" content="这几天一直在搞elasticsearch安装连接的各种问题，各种坑，使用要及其注意版本问题，版本不一样出现的问题不一样，这个错误在5.x版本中就不会出现  解决:修改配置文件，显示指定network.publish_host(ip根据自己的来)： #network.publish_host: 192.168.3.50 #discovery.zen.ping.unicast.hosts: [&amp;quo">
+<meta name="twitter:image" content="http://zhoun.site/images/cc.png">
 
 
 
@@ -136,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://zhoun.site/archives/2017/"/>
+  <link rel="canonical" href="http://zhoun.site/2017/09/26/elasticsearch4/"/>
 
 
 
 
 
-  <title>归档 | zonway</title>
+  <title>elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决 | zonway</title>
   
 
 
@@ -161,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,259 +269,203 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/26/elasticsearch4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周楠">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/dxxd.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zonway">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T10:58:29+08:00">
+                2017-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/elasticsearch/" itemprop="url" rel="index">
+                    <span itemprop="name">elasticsearch</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/elasticsearch4/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T10:58:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/elasticsearch3/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2在windows环境中安装head插件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T15:25:45+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/21/elasticsearch2/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch在linux环境中安装遇到的问题及解决方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-21T16:29:13+08:00"
-              content="2017-09-21" >
-          09-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>这几天一直在搞elasticsearch安装连接的各种问题，各种坑，使用要及其注意版本问题，版本不一样出现的问题不一样，这个错误在5.x版本中就不会出现</p>
+<p><img src="/images/cc.png" alt="启动报错界面" title="启动报错界面"></p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h4><pre><code>修改配置文件，显示指定network.publish_host(ip根据自己的来)：
+#network.publish_host: 192.168.3.50
+#discovery.zen.ping.unicast.hosts: [&quot;hosts&quot;]
+</code></pre><p>修改后就可以启动成功了<br><a id="more"></a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/20/elasticsearch1/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch及head插件在windows环境下的安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-20T17:57:28+08:00"
-              content="2017-09-20" >
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/15/second/" itemprop="url">
-              
-                <span itemprop="name">转一篇无意中在别人博客里发现的文章(如何尊重程序员，附上原文链接)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-15T17:20:03+08:00"
-              content="2017-09-15" >
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/08/first_create/" itemprop="url">
-              
-                <span itemprop="name">为什么创建此博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-08T11:14:02+08:00"
-              content="2017-09-08" >
-          09-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wx.png" alt="周楠 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/zfb.png" alt="周楠 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/elasticsearch/" rel="tag"># elasticsearch</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/25/elasticsearch3/" rel="next" title="elasticsearch2.3.2在windows环境中安装head插件">
+                <i class="fa fa-chevron-left"></i> elasticsearch2.3.2在windows环境中安装head插件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -525,6 +473,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -545,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -618,6 +579,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决"><span class="nav-number">1.</span> <span class="nav-text">解决:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -745,6 +722,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-25T07:32:29.780Z</updated>
+  <updated>2017-09-26T02:59:42.084Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</title>
+    <link href="http://zhoun.site/2017/09/26/elasticsearch4/"/>
+    <id>http://zhoun.site/2017/09/26/elasticsearch4/</id>
+    <published>2017-09-26T02:58:29.000Z</published>
+    <updated>2017-09-26T02:59:42.084Z</updated>
+    
+    <content type="html"><![CDATA[<p>这几天一直在搞elasticsearch安装连接的各种问题，各种坑，使用要及其注意版本问题，版本不一样出现的问题不一样，这个错误在5.x版本中就不会出现</p><p><img src="/images/cc.png" alt="启动报错界面" title="启动报错界面"></p><h4 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h4><pre><code>修改配置文件，显示指定network.publish_host(ip根据自己的来)：#network.publish_host: 192.168.3.50#discovery.zen.ping.unicast.hosts: [&quot;hosts&quot;]</code></pre><p>修改后就可以启动成功了<br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这几天一直在搞elasticsearch安装连接的各种问题，各种坑，使用要及其注意版本问题，版本不一样出现的问题不一样，这个错误在5.x版本中就不会出现&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/cc.png&quot; alt=&quot;启动报错界面&quot; title=&quot;启动报错界面&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;解决&quot;&gt;&lt;a href=&quot;#解决&quot; class=&quot;headerlink&quot; title=&quot;解决:&quot;&gt;&lt;/a&gt;解决:&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;修改配置文件，显示指定network.publish_host(ip根据自己的来)：
+#network.publish_host: 192.168.3.50
+#discovery.zen.ping.unicast.hosts: [&amp;quot;hosts&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;修改后就可以启动成功了&lt;br&gt;
+    
+    </summary>
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
+    
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
+    
+  </entry>
   
   <entry>
     <title>elasticsearch2.3.2在windows环境中安装head插件</title>
