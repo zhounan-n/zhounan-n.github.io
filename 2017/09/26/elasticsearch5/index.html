@@ -107,7 +107,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zhoun.site/images/jd1.png">
 <meta property="og:image" content="http://zhoun.site/images/jd2.png">
-<meta property="og:updated_time" content="2017-09-26T10:03:28.552Z">
+<meta property="og:updated_time" content="2017-09-26T10:05:19.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WINDOWS环境下安装elasticsearch集群">
 <meta name="twitter:description" content="限于硬件条件，在windows安装集群，是为了学习elastisearch以下都在本机试过了并且记录了会遇到的问题 step1:再复制一份elasticsearch文件并且重命名。 step2:修改elasticsearch配置文件 cluster.name: elasticsearch node.name: node-1 network.host: 192.168.3.50 http.port:">
@@ -383,8 +383,8 @@ http.port: 9201 (同一机器不能一样)
 network.publish_host: 192.168.3.50(本机地址)
 discovery.zen.ping.unicast.hosts: [&quot;192.168.3.50:9500&quot;] (通信地址写当前的)
 transport.tcp.port: 9501 (通信端口同一机器不能一样)
-
-cluster.name: elasticsearch
+</code></pre><a id="more"></a>     
+<pre><code>cluster.name: elasticsearch
 node.name: node-2
 network.host: 192.168.3.50
 http.port: 9201 (同一机器不能一样)
