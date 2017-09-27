@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-26T08:37:13.140Z</updated>
+  <updated>2017-09-26T10:03:28.552Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WINDOWS环境下安装elasticsearch集群</title>
+    <link href="http://zhoun.site/2017/09/26/elasticsearch5/"/>
+    <id>http://zhoun.site/2017/09/26/elasticsearch5/</id>
+    <published>2017-09-26T10:02:29.000Z</published>
+    <updated>2017-09-26T10:03:28.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>限于硬件条件，在windows安装集群，是为了学习elastisearch<br>以下都在本机试过了并且记录了会遇到的问题</p><h4 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h4><pre><code>再复制一份elasticsearch文件并且重命名。</code></pre><h4 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h4><pre><code>修改elasticsearch配置文件cluster.name: elasticsearchnode.name: node-1network.host: 192.168.3.50http.port: 9201 (同一机器不能一样)network.publish_host: 192.168.3.50(本机地址)discovery.zen.ping.unicast.hosts: [&quot;192.168.3.50:9500&quot;] (通信地址写当前的)transport.tcp.port: 9501 (通信端口同一机器不能一样)cluster.name: elasticsearchnode.name: node-2network.host: 192.168.3.50http.port: 9201 (同一机器不能一样)network.publish_host: 192.168.3.50(本机地址)discovery.zen.ping.unicast.hosts: [&quot;192.168.3.50:9500&quot;,&quot;192.168.3.50:9501&quot;] (通信地址添加前面的节点)transport.tcp.port: 9501 (通信端口同一机器不能一样)</code></pre><h4 id="step3-集群搭建成功"><a href="#step3-集群搭建成功" class="headerlink" title="step3:集群搭建成功"></a>step3:集群搭建成功</h4><pre><code>启动节点1启动节点2成功后界面会显示节点added的信息，如下图</code></pre><p><img src="/images/jd1.png" alt="节点1" title="节点1"><br><img src="/images/jd2.png" alt="节点2" title="节点2"></p><h4 id="可能会遇到的问题："><a href="#可能会遇到的问题：" class="headerlink" title="可能会遇到的问题："></a>可能会遇到的问题：</h4><pre><code>如果启动后cmd窗口自动关闭了，可能是端口问题，修改一下通信端口，如:9500</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;限于硬件条件，在windows安装集群，是为了学习elastisearch&lt;br&gt;以下都在本机试过了并且记录了会遇到的问题&lt;/p&gt;
+&lt;h4 id=&quot;step1&quot;&gt;&lt;a href=&quot;#step1&quot; class=&quot;headerlink&quot; title=&quot;step1:&quot;&gt;&lt;/a&gt;s
+      
+    
+    </summary>
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
+    
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
+    
+  </entry>
   
   <entry>
     <title>WINDOWS环境下安装curl</title>

@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="elasticsearch," />
 
 
 
@@ -97,16 +97,21 @@
 
 
 
-<meta name="description" content="java技术记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zonway">
-<meta property="og:url" content="http://zhoun.site/categories/elasticsearch/index.html">
+<meta name="description" content="限于硬件条件，在windows安装集群，是为了学习elastisearch以下都在本机试过了并且记录了会遇到的问题 step1:再复制一份elasticsearch文件并且重命名。 step2:修改elasticsearch配置文件 cluster.name: elasticsearch node.name: node-1 network.host: 192.168.3.50 http.port:">
+<meta name="keywords" content="elasticsearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WINDOWS环境下安装elasticsearch集群">
+<meta property="og:url" content="http://zhoun.site/2017/09/26/elasticsearch5/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="java技术记录">
+<meta property="og:description" content="限于硬件条件，在windows安装集群，是为了学习elastisearch以下都在本机试过了并且记录了会遇到的问题 step1:再复制一份elasticsearch文件并且重命名。 step2:修改elasticsearch配置文件 cluster.name: elasticsearch node.name: node-1 network.host: 192.168.3.50 http.port:">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://zhoun.site/images/jd1.png">
+<meta property="og:image" content="http://zhoun.site/images/jd2.png">
+<meta property="og:updated_time" content="2017-09-26T10:03:28.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zonway">
-<meta name="twitter:description" content="java技术记录">
+<meta name="twitter:title" content="WINDOWS环境下安装elasticsearch集群">
+<meta name="twitter:description" content="限于硬件条件，在windows安装集群，是为了学习elastisearch以下都在本机试过了并且记录了会遇到的问题 step1:再复制一份elasticsearch文件并且重命名。 step2:修改elasticsearch配置文件 cluster.name: elasticsearch node.name: node-1 network.host: 192.168.3.50 http.port:">
+<meta name="twitter:image" content="http://zhoun.site/images/jd1.png">
 
 
 
@@ -136,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://zhoun.site/categories/elasticsearch/"/>
+  <link rel="canonical" href="http://zhoun.site/2017/09/26/elasticsearch5/"/>
 
 
 
 
 
-  <title>分类: elasticsearch | zonway</title>
+  <title>WINDOWS环境下安装elasticsearch集群 | zonway</title>
   
 
 
@@ -161,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,195 +270,219 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>elasticsearch<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/26/elasticsearch5/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周楠">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/dxxd.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zonway">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/26/elasticsearch5/" itemprop="url">
-              
-                <span itemprop="name">WINDOWS环境下安装elasticsearch集群</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">WINDOWS环境下安装elasticsearch集群</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T18:02:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T18:02:29+08:00">
+                2017-09-26
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/elasticsearch/" itemprop="url" rel="index">
+                    <span itemprop="name">elasticsearch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/curl/" itemprop="url">
-              
-                <span itemprop="name">WINDOWS环境下安装curl</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T16:24:12+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <p>限于硬件条件，在windows安装集群，是为了学习elastisearch<br>以下都在本机试过了并且记录了会遇到的问题</p>
+<h4 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h4><pre><code>再复制一份elasticsearch文件并且重命名。
+</code></pre><h4 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h4><pre><code>修改elasticsearch配置文件
+cluster.name: elasticsearch
+node.name: node-1
+network.host: 192.168.3.50
+http.port: 9201 (同一机器不能一样)
+network.publish_host: 192.168.3.50(本机地址)
+discovery.zen.ping.unicast.hosts: [&quot;192.168.3.50:9500&quot;] (通信地址写当前的)
+transport.tcp.port: 9501 (通信端口同一机器不能一样)
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/elasticsearch4/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T10:58:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/elasticsearch3/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2在windows环境中安装head插件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T15:25:45+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/21/elasticsearch2/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch在linux环境中安装遇到的问题及解决方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-21T16:29:13+08:00"
-              content="2017-09-21" >
-          09-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/20/elasticsearch1/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch及head插件在windows环境下的安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-20T17:57:28+08:00"
-              content="2017-09-20" >
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+cluster.name: elasticsearch
+node.name: node-2
+network.host: 192.168.3.50
+http.port: 9201 (同一机器不能一样)
+network.publish_host: 192.168.3.50(本机地址)
+discovery.zen.ping.unicast.hosts: [&quot;192.168.3.50:9500&quot;,&quot;192.168.3.50:9501&quot;] (通信地址添加前面的节点)
+transport.tcp.port: 9501 (通信端口同一机器不能一样)
+</code></pre><h4 id="step3-集群搭建成功"><a href="#step3-集群搭建成功" class="headerlink" title="step3:集群搭建成功"></a>step3:集群搭建成功</h4><pre><code>启动节点1
+启动节点2成功后界面会显示节点added的信息，如下图
+</code></pre><p><img src="/images/jd1.png" alt="节点1" title="节点1"><br><img src="/images/jd2.png" alt="节点2" title="节点2"></p>
+<h4 id="可能会遇到的问题："><a href="#可能会遇到的问题：" class="headerlink" title="可能会遇到的问题："></a>可能会遇到的问题：</h4><pre><code>如果启动后cmd窗口自动关闭了，可能是端口问题，修改一下通信端口，如:9500
+</code></pre>
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wx.png" alt="周楠 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/zfb.png" alt="周楠 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/elasticsearch/" rel="tag"># elasticsearch</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/26/curl/" rel="next" title="WINDOWS环境下安装curl">
+                <i class="fa fa-chevron-left"></i> WINDOWS环境下安装curl
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -461,6 +490,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -481,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -554,6 +596,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#step1"><span class="nav-number">1.</span> <span class="nav-text">step1:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step2"><span class="nav-number">2.</span> <span class="nav-text">step2:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step3-集群搭建成功"><span class="nav-number">3.</span> <span class="nav-text">step3:集群搭建成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可能会遇到的问题："><span class="nav-number">4.</span> <span class="nav-text">可能会遇到的问题：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -681,6 +739,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
