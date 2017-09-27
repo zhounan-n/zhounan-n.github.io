@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-26T10:05:19.848Z</updated>
+  <updated>2017-09-27T06:28:45.001Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows下将elasticsearch安装为系统服务</title>
+    <link href="http://zhoun.site/2017/09/27/elasticsearch6/"/>
+    <id>http://zhoun.site/2017/09/27/elasticsearch6/</id>
+    <published>2017-09-27T06:25:42.000Z</published>
+    <updated>2017-09-27T06:28:45.001Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何将elasticsearch安装为系统服务，受限于条件需要在本地windows环境学习elasticsearch(linux下的安装可以自行百度)</p><h4 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h4><pre><code>cmd到bin目录下,执行 service.bat install执行成功后就可以在系统服务里找到elasticsearch的选项了，如下图</code></pre><p><img src="/images/es.png" alt="系统服务界面" title="系统服务界面"><br><a id="more"></a><br>    在同目录下执行service.bat 可启动服务</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何将elasticsearch安装为系统服务，受限于条件需要在本地windows环境学习elasticsearch(linux下的安装可以自行百度)&lt;/p&gt;
+&lt;h4 id=&quot;step1&quot;&gt;&lt;a href=&quot;#step1&quot; class=&quot;headerlink&quot; title=&quot;step1:&quot;&gt;&lt;/a&gt;step1:&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;cmd到bin目录下,执行 service.bat install
+执行成功后就可以在系统服务里找到elasticsearch的选项了，如下图
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/images/es.png&quot; alt=&quot;系统服务界面&quot; title=&quot;系统服务界面&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
+    
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
+    
+  </entry>
   
   <entry>
     <title>WINDOWS环境下安装elasticsearch集群</title>
