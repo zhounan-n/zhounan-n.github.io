@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhoun.site/"/>
-  <updated>2017-09-30T03:04:56.637Z</updated>
+  <updated>2017-09-30T03:09:46.114Z</updated>
   <id>http://zhoun.site/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://zhoun.site/2017/09/30/elasticsearch8/"/>
     <id>http://zhoun.site/2017/09/30/elasticsearch8/</id>
     <published>2017-09-30T02:43:09.000Z</published>
-    <updated>2017-09-30T03:04:56.637Z</updated>
+    <updated>2017-09-30T03:09:46.114Z</updated>
     
     <content type="html"><![CDATA[<p>windows环境,之前项目连整合连接一直报这个错误，而且spring官方文档上也没说这个端口是什么端口，疑惑了很久，今天在大神的帮助下总算解决了(非常感谢大神)，记录一下</p><h4 id="错误信息截图"><a href="#错误信息截图" class="headerlink" title="错误信息截图:"></a>错误信息截图:</h4><p><img src="/images/receivetimeoutexception.png" alt="连接错误信息" title="连接错误信息"><br><a id="more"></a></p><h4 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h4><pre><code>spring.data.elasticsearch.cluster-nodes=localhost:9300项目中上面这条配置的端口要与配置文件中的transport.tcp.port: 9501对应，配置这个表明是使用TransportClient来连接elasticsearch的。</code></pre><p>最后再次感谢大神的帮助让我解决了疑惑好几天的问题。</p>]]></content>
     
@@ -31,6 +31,8 @@
 &lt;h4 id=&quot;错误信息截图&quot;&gt;&lt;a href=&quot;#错误信息截图&quot; class=&quot;headerlink&quot; title=&quot;错误信息截图:&quot;&gt;&lt;/a&gt;错误信息截图:&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/images/receivetimeoutexception.png&quot; alt=&quot;连接错误信息&quot; title=&quot;连接错误信息&quot;&gt;&lt;br&gt;
     
     </summary>
+    
+      <category term="elasticsearch" scheme="http://zhoun.site/categories/elasticsearch/"/>
     
     
       <category term="elasticsearch" scheme="http://zhoun.site/tags/elasticsearch/"/>
