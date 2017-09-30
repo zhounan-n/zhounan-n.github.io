@@ -97,20 +97,20 @@
 
 
 
-<meta name="description" content="如何将elasticsearch安装为系统服务，受限于条件需要在本地windows环境学习elasticsearch(linux下的安装可以自行百度) step1:cmd到bin目录下,执行 service.bat install 执行成功后就可以在系统服务里找到elasticsearch的选项了，如下图">
+<meta name="description" content="windows环境,之前项目连整合连接一直报这个错误，而且spring官方文档上也没说这个端口是什么端口，疑惑了很久，今天在大神的帮助下总算解决了(非常感谢大神)，记录一下 错误信息截图:">
 <meta name="keywords" content="elasticsearch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows下将elasticsearch安装为系统服务">
-<meta property="og:url" content="http://zhoun.site/2017/09/27/elasticsearch6/index.html">
+<meta property="og:title" content="ELASTICSEARCH:项目整合连接报错receiveTransportException:fail to getnode解决">
+<meta property="og:url" content="http://zhoun.site/2017/09/30/elasticsearch8/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="如何将elasticsearch安装为系统服务，受限于条件需要在本地windows环境学习elasticsearch(linux下的安装可以自行百度) step1:cmd到bin目录下,执行 service.bat install 执行成功后就可以在系统服务里找到elasticsearch的选项了，如下图">
+<meta property="og:description" content="windows环境,之前项目连整合连接一直报这个错误，而且spring官方文档上也没说这个端口是什么端口，疑惑了很久，今天在大神的帮助下总算解决了(非常感谢大神)，记录一下 错误信息截图:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://zhoun.site/images/es.png">
-<meta property="og:updated_time" content="2017-09-27T06:28:45.001Z">
+<meta property="og:image" content="http://zhoun.site/images/receivetimeoutexception.png">
+<meta property="og:updated_time" content="2017-09-30T03:04:56.637Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="windows下将elasticsearch安装为系统服务">
-<meta name="twitter:description" content="如何将elasticsearch安装为系统服务，受限于条件需要在本地windows环境学习elasticsearch(linux下的安装可以自行百度) step1:cmd到bin目录下,执行 service.bat install 执行成功后就可以在系统服务里找到elasticsearch的选项了，如下图">
-<meta name="twitter:image" content="http://zhoun.site/images/es.png">
+<meta name="twitter:title" content="ELASTICSEARCH:项目整合连接报错receiveTransportException:fail to getnode解决">
+<meta name="twitter:description" content="windows环境,之前项目连整合连接一直报这个错误，而且spring官方文档上也没说这个端口是什么端口，疑惑了很久，今天在大神的帮助下总算解决了(非常感谢大神)，记录一下 错误信息截图:">
+<meta name="twitter:image" content="http://zhoun.site/images/receivetimeoutexception.png">
 
 
 
@@ -140,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://zhoun.site/2017/09/27/elasticsearch6/"/>
+  <link rel="canonical" href="http://zhoun.site/2017/09/30/elasticsearch8/"/>
 
 
 
 
 
-  <title>windows下将elasticsearch安装为系统服务 | zonway</title>
+  <title>ELASTICSEARCH:项目整合连接报错receiveTransportException:fail to getnode解决 | zonway</title>
   
 
 
@@ -278,12 +278,12 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-elasticsearch" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/27/elasticsearch6/">
+    <link itemprop="mainEntityOfPage" href="http://zhoun.site/2017/09/30/elasticsearch8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="周楠">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">windows下将elasticsearch安装为系统服务</h1>
+          <h1 class="post-title" itemprop="name headline">ELASTICSEARCH:项目整合连接报错receiveTransportException:fail to getnode解决</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-27T14:25:42+08:00">
-                2017-09-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-30T10:43:09+08:00">
+                2017-09-30
               </time>
             
 
@@ -322,28 +322,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/elasticsearch/" itemprop="url" rel="index">
-                    <span itemprop="name">elasticsearch</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -372,10 +350,12 @@
       
 
       
-        <p>如何将elasticsearch安装为系统服务，受限于条件需要在本地windows环境学习elasticsearch(linux下的安装可以自行百度)</p>
-<h4 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h4><pre><code>cmd到bin目录下,执行 service.bat install
-执行成功后就可以在系统服务里找到elasticsearch的选项了，如下图
-</code></pre><p><img src="/images/es.png" alt="系统服务界面" title="系统服务界面"><br><a id="more"></a><br>    在同目录下执行service.bat 可启动服务</p>
+        <p>windows环境,之前项目连整合连接一直报这个错误，而且spring官方文档上也没说这个端口是什么端口，疑惑了很久，今天在大神的帮助下总算解决了(非常感谢大神)，记录一下</p>
+<h4 id="错误信息截图"><a href="#错误信息截图" class="headerlink" title="错误信息截图:"></a>错误信息截图:</h4><p><img src="/images/receivetimeoutexception.png" alt="连接错误信息" title="连接错误信息"><br><a id="more"></a></p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h4><pre><code>spring.data.elasticsearch.cluster-nodes=localhost:9300
+项目中上面这条配置的端口要与配置文件中的transport.tcp.port: 9501对应，
+配置这个表明是使用TransportClient来连接elasticsearch的。
+</code></pre><p>最后再次感谢大神的帮助让我解决了疑惑好几天的问题。</p>
 
       
     </div>
@@ -435,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/26/elasticsearch5/" rel="next" title="WINDOWS环境下安装elasticsearch集群">
-                <i class="fa fa-chevron-left"></i> WINDOWS环境下安装elasticsearch集群
+              <a href="/2017/09/28/elasticsearch7/" rel="next" title="ELASTICSEARCH:使用restful api操作数据">
+                <i class="fa fa-chevron-left"></i> ELASTICSEARCH:使用restful api操作数据
               </a>
             
           </div>
@@ -444,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/28/elasticsearch7/" rel="prev" title="ELASTICSEARCH:使用restful api操作数据">
-                ELASTICSEARCH:使用restful api操作数据 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -591,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#step1"><span class="nav-number">1.</span> <span class="nav-text">step1:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#错误信息截图"><span class="nav-number">1.</span> <span class="nav-text">错误信息截图:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决:</span></a></li></ol></div>
             
 
           </div>
