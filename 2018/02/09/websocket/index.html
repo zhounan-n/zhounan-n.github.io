@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="websocket 后台数据实时推送," />
 
 
 
@@ -97,16 +97,18 @@
 
 
 
-<meta name="description" content="java技术记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zonway">
-<meta property="og:url" content="http://www.zhoun.site/tags/elasticsearch/index.html">
+<meta name="description" content="本篇总结一下websocket后台数据实时推送业务场景：页面调用一个查询接口，后台同时调用多个三方接口返回数据，页面接收这些数据，因为效率上的考虑（具体效果怎么样，值不值得采用并不知道，有小伙伴比较了解的可以指点一二啊），后台调用多个接口使用多线程处理，并且将返回的数据用spring websocket实时推送到页面，后台将数据保存入库 涉及知识点:多线程，线程安全，spring websocke">
+<meta name="keywords" content="websocket 后台数据实时推送">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后台数据实时推送">
+<meta property="og:url" content="http://www.zhoun.site/2018/02/09/websocket/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="java技术记录">
+<meta property="og:description" content="本篇总结一下websocket后台数据实时推送业务场景：页面调用一个查询接口，后台同时调用多个三方接口返回数据，页面接收这些数据，因为效率上的考虑（具体效果怎么样，值不值得采用并不知道，有小伙伴比较了解的可以指点一二啊），后台调用多个接口使用多线程处理，并且将返回的数据用spring websocket实时推送到页面，后台将数据保存入库 涉及知识点:多线程，线程安全，spring websocke">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-09T11:54:24.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zonway">
-<meta name="twitter:description" content="java技术记录">
+<meta name="twitter:title" content="后台数据实时推送">
+<meta name="twitter:description" content="本篇总结一下websocket后台数据实时推送业务场景：页面调用一个查询接口，后台同时调用多个三方接口返回数据，页面接收这些数据，因为效率上的考虑（具体效果怎么样，值不值得采用并不知道，有小伙伴比较了解的可以指点一二啊），后台调用多个接口使用多线程处理，并且将返回的数据用spring websocket实时推送到页面，后台将数据保存入库 涉及知识点:多线程，线程安全，spring websocke">
 
 
 
@@ -136,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://www.zhoun.site/tags/elasticsearch/"/>
+  <link rel="canonical" href="http://www.zhoun.site/2018/02/09/websocket/"/>
 
 
 
 
 
-  <title>标签: elasticsearch | zonway</title>
+  <title>后台数据实时推送 | zonway</title>
   
 
 
@@ -161,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,278 +267,200 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>elasticsearch<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhoun.site/2018/02/09/websocket/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周楠">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/dxxd.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zonway">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/30/elasticsearch8/" itemprop="url">
-              
-                <span itemprop="name">ELASTICSEARCH:项目整合连接报错receiveTransportException:fail to getnode解决</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">后台数据实时推送</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-30T10:43:09+08:00"
-              content="2017-09-30" >
-          09-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-09T19:48:08+08:00">
+                2018-02-09
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/优化/" itemprop="url" rel="index">
+                    <span itemprop="name">优化</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/elasticsearch7/" itemprop="url">
-              
-                <span itemprop="name">ELASTICSEARCH:使用restful api操作数据</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T09:59:23+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/27/elasticsearch6/" itemprop="url">
-              
-                <span itemprop="name">windows下将elasticsearch安装为系统服务</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-27T14:25:42+08:00"
-              content="2017-09-27" >
-          09-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/elasticsearch5/" itemprop="url">
-              
-                <span itemprop="name">WINDOWS环境下安装elasticsearch集群</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T18:02:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/curl/" itemprop="url">
-              
-                <span itemprop="name">WINDOWS环境下安装curl</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T16:24:12+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/elasticsearch4/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T10:58:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/elasticsearch3/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2在windows环境中安装head插件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T15:25:45+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/21/elasticsearch2/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch在linux环境中安装遇到的问题及解决方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-21T16:29:13+08:00"
-              content="2017-09-21" >
-          09-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/20/elasticsearch1/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch及head插件在windows环境下的安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-20T17:57:28+08:00"
-              content="2017-09-20" >
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h4 id="本篇总结一下websocket后台数据实时推送"><a href="#本篇总结一下websocket后台数据实时推送" class="headerlink" title="本篇总结一下websocket后台数据实时推送"></a>本篇总结一下websocket后台数据实时推送</h4><h4 id="业务场景："><a href="#业务场景：" class="headerlink" title="业务场景："></a>业务场景：</h4><p>页面调用一个查询接口，后台同时调用多个三方接口返回数据，页面接收这些数据，因为效率上的考虑（具体效果怎么样，值不值得采用并不知道，有小伙伴比较了解的可以指点一二啊），后台调用多个接口使用多线程处理，并且将返回的数据用spring websocket实时推送到页面，后台将数据保存入库</p>
+<h4 id="涉及知识点"><a href="#涉及知识点" class="headerlink" title="涉及知识点:"></a>涉及知识点:</h4><p>多线程，线程安全，spring websocket</p>
+<p>spring websocket 在spring官网有完整的demo，这里就不赘述了，这里只简单的理下思路。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wx.png" alt="周楠 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/zfb.png" alt="周楠 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/websocket-后台数据实时推送/" rel="tag"># websocket 后台数据实时推送</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/08/fastdfs/" rel="next" title="fastdfs单机安装部署全过程(阿里云centos环境)">
+                <i class="fa fa-chevron-left"></i> fastdfs单机安装部署全过程(阿里云centos环境)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -544,6 +468,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -564,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -637,6 +574,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#本篇总结一下websocket后台数据实时推送"><span class="nav-number">1.</span> <span class="nav-text">本篇总结一下websocket后台数据实时推送</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务场景："><span class="nav-number">2.</span> <span class="nav-text">业务场景：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#涉及知识点"><span class="nav-number">3.</span> <span class="nav-text">涉及知识点:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -764,6 +717,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
