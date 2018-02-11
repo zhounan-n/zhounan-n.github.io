@@ -70,27 +70,6 @@ cd libfastcommon-master
   </entry>
   
   <entry>
-    <title>项目部署</title>
-    <link href="http://www.zhoun.site/2017/12/02/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
-    <id>http://www.zhoun.site/2017/12/02/项目部署/</id>
-    <published>2017-12-01T16:01:10.000Z</published>
-    <updated>2017-12-03T13:29:30.969Z</updated>
-    
-    <content type="html"><![CDATA[<p>xftp传war包<br>sql执行<br>启动tomcat<br>域名解析<br>tomcat多个站点绑定访问(和apache的区别)<br>tomcat配置启动方式，server.xml权限控制，发布脚本,本地项目build deploy到服务器  tomcat默认访问ROOT目录下的<br>(用context配置覆盖appBase而不是直接修改appBase)<br>同一服务器配置两个tomcat 设置nginx<br>tomcat集群 nginx负载均衡</p><p>jekins持续构建</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;xftp传war包&lt;br&gt;sql执行&lt;br&gt;启动tomcat&lt;br&gt;域名解析&lt;br&gt;tomcat多个站点绑定访问(和apache的区别)&lt;br&gt;tomcat配置启动方式，server.xml权限控制，发布脚本,本地项目build deploy到服务器  tomcat默认访问
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>阿里云ECS服务器cenos7系统部署环境安装(tomcat,jdk,mysql等)</title>
     <link href="http://www.zhoun.site/2017/11/02/aliyun1/"/>
     <id>http://www.zhoun.site/2017/11/02/aliyun1/</id>
