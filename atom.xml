@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhoun.site/"/>
-  <updated>2018-03-19T15:05:17.465Z</updated>
+  <updated>2018-03-26T13:31:23.821Z</updated>
   <id>http://www.zhoun.site/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redis集群搭建</title>
+    <link href="http://www.zhoun.site/2018/03/26/redis1/"/>
+    <id>http://www.zhoun.site/2018/03/26/redis1/</id>
+    <published>2018-03-26T13:24:01.000Z</published>
+    <updated>2018-03-26T13:31:23.821Z</updated>
+    
+    <content type="html"><![CDATA[<p>redis集群搭建过程记录：</p><blockquote><ul><li>安装ruby</li><li>安装redis</li><li>单机模拟集群</li><li>启动</li></ul></blockquote><h3 id="ruby安装"><a href="#ruby安装" class="headerlink" title="ruby安装"></a>ruby安装</h3><p>在centos7系统上用yum安装的ruby默认是2.0版本的，需要升级。<br>升级方式：<br>gpg –keyserver hkp://keys.gnupg.net –recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</p><a id="more"></a><p>\curl -sSL <a href="https://get.rvm.io" target="_blank" rel="external">https://get.rvm.io</a> | bash -s stable</p><p>source  /etc/profile.d/rvm.sh</p><p>rvm list known(可以查看版本)</p><p>rvm install 2.4.1</p><p>ruby -v<br>gem -v(查看安装的版本)</p><p>gem install redis(安装redis接口)</p><hr><h3 id="redis安装"><a href="#redis安装" class="headerlink" title="redis安装"></a>redis安装</h3><p>上传对应的redis包到相应的目录中(如/opt/redis/)<br>tar -zxvf (解压包)<br>cd redis(进入解压的目录)<br>make –prefix /usr/local/redis (安装到对应的目录)<br>make install</p><h3 id="集群模拟"><a href="#集群模拟" class="headerlink" title="集群模拟"></a>集群模拟</h3><p>cd /opt<br>mkdir redis-cluster<br>cd redis-cluster<br>mkdir -p 9001/data 9002/data 9003/data 9004/data 9005/data 9006/data<br>(9001-9006六个端口 模拟集群 主备 根据节点选取失败规则，最少3个，所有最少6个节点)</p><p>将redis安装目录bin下的文件拷贝到900X文件下(上面是安装到/usr/local/redis的目录中了)<br>将redis源码目录src下的redis-trib.rb拷贝到redis-cluster目录下<br>再将redis的配置文件复制到900X目录下</p><h3 id="集群启动"><a href="#集群启动" class="headerlink" title="集群启动"></a>集群启动</h3><p>进入到900x对应的目录下执行 ./redis-server ./redis.conf<br>启动遇到的错误：<br>1：WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add ‘vm.overcommit_memory = 1’ to /etc/sysctl.conf and then reboot or run the command ‘sysctl vm.overcommit_memory=1’ for this to take effect.<br>13891:M 26 Mar 15:41:00.353 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command ‘echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled’ as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.</p><p>2:WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.</p><p>以上两个错误需要修改/etc/sysctl,加上以下两个东西。<br>vm.overcommit_memory = 1<br>net.core.somaxconn= 1024<br>启动就不会报这个错误了</p><p>启动6个节点后再设置集群：<br>进入到redis源码src目录下：<br>./redis-trib.rb create –replicas 1 192.168.101.3:7001 192.168.101.3:7002 192.168.101.3:7003 192.168.101.3:7004 192.168.101.3:7005  192.168.101.3:7006<br>执行以上命令设置集群</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;redis集群搭建过程记录：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;安装ruby&lt;/li&gt;
+&lt;li&gt;安装redis&lt;/li&gt;
+&lt;li&gt;单机模拟集群&lt;/li&gt;
+&lt;li&gt;启动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;ruby安装&quot;&gt;&lt;a href=&quot;#ruby安装&quot; class=&quot;headerlink&quot; title=&quot;ruby安装&quot;&gt;&lt;/a&gt;ruby安装&lt;/h3&gt;&lt;p&gt;在centos7系统上用yum安装的ruby默认是2.0版本的，需要升级。&lt;br&gt;升级方式：&lt;br&gt;gpg –keyserver hkp://keys.gnupg.net –recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="redis" scheme="http://www.zhoun.site/categories/redis/"/>
+    
+    
+      <category term="redis 集群" scheme="http://www.zhoun.site/tags/redis-%E9%9B%86%E7%BE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>java多线程之线程同步工具类总结</title>
