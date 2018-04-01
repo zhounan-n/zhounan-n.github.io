@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhoun.site/"/>
-  <updated>2018-03-26T13:31:23.821Z</updated>
+  <updated>2018-04-01T13:16:56.429Z</updated>
   <id>http://www.zhoun.site/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java单点登录的实现</title>
+    <link href="http://www.zhoun.site/2018/04/01/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95/"/>
+    <id>http://www.zhoun.site/2018/04/01/单点登录/</id>
+    <published>2018-04-01T13:14:32.000Z</published>
+    <updated>2018-04-01T13:16:56.429Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><ul><li>什么单点登录</li><li>单点登录的好处</li><li>单点登录的实现</li></ul></blockquote><h3 id="单点登录的概念"><a href="#单点登录的概念" class="headerlink" title="单点登录的概念"></a>单点登录的概念</h3><blockquote><p>简单地说，单点登录就是面对集群多个server之间，有一个server登录了，其他server也一起登录了</p><h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2></blockquote><h3 id="单点登录的好处"><a href="#单点登录的好处" class="headerlink" title="单点登录的好处"></a>单点登录的好处</h3><blockquote><p>用户不用进行多次登陆，身份认证中间流转打通子系统，降低安全和管理的风险，应对面向服务的架构，分布式集群，不同步服务部署在不同的服务器上的情况</p></blockquote><h3 id="单点登录的实现"><a href="#单点登录的实现" class="headerlink" title="单点登录的实现"></a>单点登录的实现</h3><blockquote><p>通过redis存储token来进行身份的认证</p></blockquote><p>具体实现步骤：<br>1：登录接口，接受密码进行比对，是否存在该用户，密码是否正确，生成token(可以用jwt)，用redis将token信息作为key的一部分，value存放用户信息,redis设置过期时间。将token写入cookie(浏览器关闭自动退出),返回token</p><p>2: 拦截器接收cookie,根据token获取用户信息(没有token或者从redis中获取不到对应的信息则需要重新登录)，获取到用户则刷新redis失效时间</p><p>3：手动退出,清空redis</p><p>(认证作为单独的一个服务，其他服务接收到token用它调用认证服务器认证信息)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;什么单点登录&lt;/li&gt;
+&lt;li&gt;单点登录的好处&lt;/li&gt;
+&lt;li&gt;单点登录的实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;单点登录的概念&quot;&gt;&lt;a href=&quot;#单点登录的概念&quot; class=&quot;headerlink&quot; title=&quot;单点登录的概念&quot;&gt;&lt;/a&gt;单点登录的概念&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;简单地说，单点登录就是面对集群多个server之间，有一个server登录了，其他server也一起登录了&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="sso" scheme="http://www.zhoun.site/categories/sso/"/>
+    
+    
+      <category term="sso" scheme="http://www.zhoun.site/tags/sso/"/>
+    
+  </entry>
   
   <entry>
     <title>redis集群搭建</title>
