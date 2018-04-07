@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhoun.site/"/>
-  <updated>2018-04-01T13:36:35.173Z</updated>
+  <updated>2018-04-07T15:44:57.097Z</updated>
   <id>http://www.zhoun.site/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java简单实现商品的秒杀(大概思路记录)</title>
+    <link href="http://www.zhoun.site/2018/04/07/seckill/"/>
+    <id>http://www.zhoun.site/2018/04/07/seckill/</id>
+    <published>2018-04-07T15:41:18.000Z</published>
+    <updated>2018-04-07T15:44:57.097Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前在面试的时候遇到过面试官问商品秒杀的问题，因为目前还没有在实际项目用到过，所以从网上找了视频学了下，用简单的demo练习了一下,这篇算是记录学习的一些概要。<br>参考：慕课网java秒杀api视频</p><p>秒杀实际上就是对于库存的操作。<br>秒杀的数据库设计：<br>秒杀表记录商品、库存、秒杀开始结束时间，秒杀成功记录秒杀明细用秒杀明细表。<br>同一用户只能对同一商品进行秒杀一次，所以秒杀商品和用户确定秒杀的唯一性，用联合主键<br><a id="more"></a><br>create table seckill(<br> ‘seckill_id’ bigint not null auto_increment comment ‘’,<br> ‘name’ varchar(120) not null comment ‘库存名字’,<br> ‘number’ int not null comment ‘库存数量’,<br> ‘start_time’ TIMESTAMP  not null comment ‘秒杀开始时间’,<br> ‘end_time’ TIMESTAMP  not null comment ‘秒杀结束时间’,<br> ‘create_time’ TIMESTAMP not null comment ‘创建时间’,<br> PRIMARY key (seckill_id),<br> key idx_start_time(start_time),<br> key idx_end_time(end_time),<br> key idx_reate_time(create_time)<br>)ENGINE=INNODB AUTO_INCREMENT=1000 DEFAULT CHARSET=UTF8 comment ‘秒杀库存表’;</p><p>– 秒杀成功明细表<br>create table success_killd(<br>  ‘seckill_id’ bigint not null comment ‘秒杀商品id’,<br>  ‘user_phone’ bigint not null comment ‘用户手机号’,<br>  ‘state’ tinyint not null default -1 comment ‘状态: -1表示无效 ‘<br>  ‘create_time’ TIMESTAMP not null comment ‘创建时间’,<br>  PRIMARY key(seckill_id,user_phone),/<em>联合主键 同一用户同一产品只能秒杀一次</em>/<br>  KEY idx_create_time(create_time)<br>)ENGINE=INNODB DEFAULT CHARSET=UTF8 comment ‘秒杀成功明细表’;</p><p>后台接口：<br>秒杀列表<br>秒杀商品详情<br>秒杀操作<br>暴露秒杀接口</p><p>秒杀逻辑：<br>   1：用户信息的判断(要登录)<br>   2：减库存+购买明细<br>    1：判断明细是否重复插入，即判断是否重复购买<br>    2：减库存(秒杀是否结束)<br>    3：秒杀成功增加购买明细<br>  秒杀为成功则事务回滚(并不减少库存)</p><p>sql控制部分：<br>        减库存(在对应时间内减库存)：<br>        UPDATE seckill<br>        SET number = number - 1<br>        WHERE seckill_id = #{seckillId}<br>        AND start_time &lt;![CDATA[<br>        &lt;=<br>        ]]&gt; #{killTime}<br>        AND end_time &gt;= #{killTime}<br>        AND number &gt; 0</p><pre><code>    &lt;!--添加主键冲突时忽略错误返回0--&gt;    INSERT IGNORE INTO success_killed (seckill_id, user_phone, state)    VALUES (#{seckillId}, #{userPhone}, 0)(后续补充)行级锁：排它锁 共享锁 (针对索引)共享锁: 只读排它锁：只能一个事务进行操作</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前在面试的时候遇到过面试官问商品秒杀的问题，因为目前还没有在实际项目用到过，所以从网上找了视频学了下，用简单的demo练习了一下,这篇算是记录学习的一些概要。&lt;br&gt;参考：慕课网java秒杀api视频&lt;/p&gt;
+&lt;p&gt;秒杀实际上就是对于库存的操作。&lt;br&gt;秒杀的数据库设计：&lt;br&gt;秒杀表记录商品、库存、秒杀开始结束时间，秒杀成功记录秒杀明细用秒杀明细表。&lt;br&gt;同一用户只能对同一商品进行秒杀一次，所以秒杀商品和用户确定秒杀的唯一性，用联合主键&lt;br&gt;
+    
+    </summary>
+    
+      <category term="java基础" scheme="http://www.zhoun.site/categories/java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="商品秒杀 java" scheme="http://www.zhoun.site/tags/%E5%95%86%E5%93%81%E7%A7%92%E6%9D%80-java/"/>
+    
+  </entry>
   
   <entry>
     <title>java单点登录的实现</title>

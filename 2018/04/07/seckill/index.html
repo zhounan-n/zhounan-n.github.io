@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="商品秒杀 java," />
 
 
 
@@ -97,16 +97,18 @@
 
 
 
-<meta name="description" content="java技术记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zonway">
-<meta property="og:url" content="http://www.zhoun.site/tags/elasticsearch/index.html">
+<meta name="description" content="之前在面试的时候遇到过面试官问商品秒杀的问题，因为目前还没有在实际项目用到过，所以从网上找了视频学了下，用简单的demo练习了一下,这篇算是记录学习的一些概要。参考：慕课网java秒杀api视频 秒杀实际上就是对于库存的操作。秒杀的数据库设计：秒杀表记录商品、库存、秒杀开始结束时间，秒杀成功记录秒杀明细用秒杀明细表。同一用户只能对同一商品进行秒杀一次，所以秒杀商品和用户确定秒杀的唯一性，用联合主键">
+<meta name="keywords" content="商品秒杀 java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java简单实现商品的秒杀(大概思路记录)">
+<meta property="og:url" content="http://www.zhoun.site/2018/04/07/seckill/index.html">
 <meta property="og:site_name" content="zonway">
-<meta property="og:description" content="java技术记录">
+<meta property="og:description" content="之前在面试的时候遇到过面试官问商品秒杀的问题，因为目前还没有在实际项目用到过，所以从网上找了视频学了下，用简单的demo练习了一下,这篇算是记录学习的一些概要。参考：慕课网java秒杀api视频 秒杀实际上就是对于库存的操作。秒杀的数据库设计：秒杀表记录商品、库存、秒杀开始结束时间，秒杀成功记录秒杀明细用秒杀明细表。同一用户只能对同一商品进行秒杀一次，所以秒杀商品和用户确定秒杀的唯一性，用联合主键">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-07T15:44:57.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zonway">
-<meta name="twitter:description" content="java技术记录">
+<meta name="twitter:title" content="java简单实现商品的秒杀(大概思路记录)">
+<meta name="twitter:description" content="之前在面试的时候遇到过面试官问商品秒杀的问题，因为目前还没有在实际项目用到过，所以从网上找了视频学了下，用简单的demo练习了一下,这篇算是记录学习的一些概要。参考：慕课网java秒杀api视频 秒杀实际上就是对于库存的操作。秒杀的数据库设计：秒杀表记录商品、库存、秒杀开始结束时间，秒杀成功记录秒杀明细用秒杀明细表。同一用户只能对同一商品进行秒杀一次，所以秒杀商品和用户确定秒杀的唯一性，用联合主键">
 
 
 
@@ -136,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://www.zhoun.site/tags/elasticsearch/"/>
+  <link rel="canonical" href="http://www.zhoun.site/2018/04/07/seckill/"/>
 
 
 
 
 
-  <title>标签: elasticsearch | zonway</title>
+  <title>java简单实现商品的秒杀(大概思路记录) | zonway</title>
   
 
 
@@ -161,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -265,278 +267,222 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>elasticsearch<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.zhoun.site/2018/04/07/seckill/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="周楠">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/dxxd.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zonway">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/30/elasticsearch8/" itemprop="url">
-              
-                <span itemprop="name">ELASTICSEARCH:项目整合连接报错receiveTransportException:fail to getnode解决</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">java简单实现商品的秒杀(大概思路记录)</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-30T10:43:09+08:00"
-              content="2017-09-30" >
-          09-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-07T23:41:18+08:00">
+                2018-04-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/04/07/seckill/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/04/07/seckill/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/elasticsearch7/" itemprop="url">
-              
-                <span itemprop="name">ELASTICSEARCH:使用restful api操作数据</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T09:59:23+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <p>之前在面试的时候遇到过面试官问商品秒杀的问题，因为目前还没有在实际项目用到过，所以从网上找了视频学了下，用简单的demo练习了一下,这篇算是记录学习的一些概要。<br>参考：慕课网java秒杀api视频</p>
+<p>秒杀实际上就是对于库存的操作。<br>秒杀的数据库设计：<br>秒杀表记录商品、库存、秒杀开始结束时间，秒杀成功记录秒杀明细用秒杀明细表。<br>同一用户只能对同一商品进行秒杀一次，所以秒杀商品和用户确定秒杀的唯一性，用联合主键<br><a id="more"></a><br>create table seckill(<br> ‘seckill_id’ bigint not null auto_increment comment ‘’,<br> ‘name’ varchar(120) not null comment ‘库存名字’,<br> ‘number’ int not null comment ‘库存数量’,<br> ‘start_time’ TIMESTAMP  not null comment ‘秒杀开始时间’,<br> ‘end_time’ TIMESTAMP  not null comment ‘秒杀结束时间’,<br> ‘create_time’ TIMESTAMP not null comment ‘创建时间’,<br> PRIMARY key (seckill_id),<br> key idx_start_time(start_time),<br> key idx_end_time(end_time),<br> key idx_reate_time(create_time)<br>)ENGINE=INNODB AUTO_INCREMENT=1000 DEFAULT CHARSET=UTF8 comment ‘秒杀库存表’;</p>
+<p>– 秒杀成功明细表<br>create table success_killd(<br>  ‘seckill_id’ bigint not null comment ‘秒杀商品id’,<br>  ‘user_phone’ bigint not null comment ‘用户手机号’,<br>  ‘state’ tinyint not null default -1 comment ‘状态: -1表示无效 ‘<br>  ‘create_time’ TIMESTAMP not null comment ‘创建时间’,<br>  PRIMARY key(seckill_id,user_phone),/<em>联合主键 同一用户同一产品只能秒杀一次</em>/<br>  KEY idx_create_time(create_time)<br>)ENGINE=INNODB DEFAULT CHARSET=UTF8 comment ‘秒杀成功明细表’;</p>
+<p>后台接口：<br>秒杀列表<br>秒杀商品详情<br>秒杀操作<br>暴露秒杀接口</p>
+<p>秒杀逻辑：<br>   1：用户信息的判断(要登录)<br>   2：减库存+购买明细<br>    1：判断明细是否重复插入，即判断是否重复购买<br>    2：减库存(秒杀是否结束)<br>    3：秒杀成功增加购买明细<br>  秒杀为成功则事务回滚(并不减少库存)</p>
+<p>sql控制部分：<br>        减库存(在对应时间内减库存)：<br>        UPDATE seckill<br>        SET number = number - 1<br>        WHERE seckill_id = #{seckillId}<br>        AND start_time &lt;![CDATA[<br>        &lt;=<br>        ]]&gt; #{killTime}<br>        AND end_time &gt;= #{killTime}<br>        AND number &gt; 0</p>
+<pre><code>    &lt;!--添加主键冲突时忽略错误返回0--&gt;
+    INSERT IGNORE INTO success_killed (seckill_id, user_phone, state)
+    VALUES (#{seckillId}, #{userPhone}, 0)
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/27/elasticsearch6/" itemprop="url">
-              
-                <span itemprop="name">windows下将elasticsearch安装为系统服务</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-27T14:25:42+08:00"
-              content="2017-09-27" >
-          09-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/elasticsearch5/" itemprop="url">
-              
-                <span itemprop="name">WINDOWS环境下安装elasticsearch集群</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T18:02:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/curl/" itemprop="url">
-              
-                <span itemprop="name">WINDOWS环境下安装curl</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T16:24:12+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/26/elasticsearch4/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2启动报错：ReceiveTimeOutTransportException解决</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-26T10:58:29+08:00"
-              content="2017-09-26" >
-          09-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/25/elasticsearch3/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch2.3.2在windows环境中安装head插件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-25T15:25:45+08:00"
-              content="2017-09-25" >
-          09-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/21/elasticsearch2/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch在linux环境中安装遇到的问题及解决方法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-21T16:29:13+08:00"
-              content="2017-09-21" >
-          09-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/20/elasticsearch1/" itemprop="url">
-              
-                <span itemprop="name">elasticsearch及head插件在windows环境下的安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-20T17:57:28+08:00"
-              content="2017-09-20" >
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+(后续补充)
+行级锁：排它锁 共享锁 (针对索引)
+共享锁: 只读
+排它锁：只能一个事务进行操作
+</code></pre>
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wx.png" alt="周楠 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/zfb.png" alt="周楠 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/商品秒杀-java/" rel="tag"># 商品秒杀 java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/01/sso/" rel="next" title="java单点登录的实现">
+                <i class="fa fa-chevron-left"></i> java单点登录的实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -544,6 +490,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -764,6 +716,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
